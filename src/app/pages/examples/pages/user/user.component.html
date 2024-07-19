@@ -1,0 +1,276 @@
+<div class="content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header" style="margin-bottom: 20px"></div>
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-md-4 pr-md-1">
+                <div class="form-group">
+                  <label> Compañia </label>
+                  <input
+                    class="form-control"
+                    disabled=""
+                    type="text"
+                    value="COTEDEM S.A."
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 px-md-1">
+                <div class="form-group">
+                  <label> Nombre del Analista </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    [(ngModel)]="analistaNombre"
+                    name="analistaNombre"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 pl-md-1">
+                <div class="form-group">
+                  <label> Email </label>
+                  <input
+                    class="form-control"
+                    placeholder="nombre@email.com"
+                    type="email"
+                    [(ngModel)]="analistaEmail"
+                    name="analistaEmail"
+                    required
+                    email
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 pr-md-1">
+                <div class="form-group">
+                  <label> Fecha </label>
+                  <input
+                    class="form-control"
+                    disabled=""
+                    type="text"
+                    value="{{ today | date : 'yyyy-MM-dd' }}"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 pr-md-1">
+                <div class="form-group">
+                  <label> Cargo </label>
+                  <input class="form-control" type="text" value="" />
+                </div>
+              </div>
+              <div class="col-md-4 pl-md-1">
+                <div class="form-group">
+                  <label> Web </label>
+                  <input class="form-control" type="text" value="" />
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label> Address </label>
+                  <input
+                    class="form-control"
+                    placeholder="Home Address"
+                    type="text"
+                    value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 pr-md-1">
+                <div class="form-group">
+                  <label> City </label>
+                  <input class="form-control" type="text" value="Mike" />
+                </div>
+              </div>
+              <div class="col-md-4 px-md-1">
+                <div class="form-group">
+                  <label> Country </label>
+                  <input class="form-control" type="text" value="Andrew" />
+                </div>
+              </div>
+              <div class="col-md-4 pl-md-1">
+                <div class="form-group">
+                  <label> Postal Code </label>
+                  <input
+                    class="form-control"
+                    placeholder="ZIP Code"
+                    type="number"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label> About Me </label>
+                  <textarea class="form-control" cols="80" rows="4">
+Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.
+</textarea
+                  >
+                </div>
+              </div>
+            </div> -->
+          </form>
+        </div>
+        <div class="card-footer">
+          <button
+            class="btn btn-fill btn-danger"
+            type="submit"
+            (click)="generateReport()"
+            [disabled]="!analistaNombre || !analistaEmail"
+          >
+            Previsualizar Informe
+          </button>
+        </div>
+        <div *ngIf="!isLoading && showIframe">
+          <div
+            class="card-footer"
+            style="background-color: beige; text-align: center"
+          >
+            <img src="assets/img/cotedem1.jpeg" width="40%" />
+            <h4 style="color: black">
+              Informe de Inteligencia de Amenazas Cibernéticas
+            </h4>
+            <p style="text-align: justify; color: black">
+              Este informe proporciona una visión detallada de las amenazas
+              cibernéticas detectadas y analizadas entre el 01/01/2024 hasta hoy
+              {{ today | date : "dd-MM-yyyy" }}. Se destacan las amenazas más
+              críticas, los patrones emergentes y las recomendaciones para la
+              mitigación de los riesgos. Este análisis es fundamental para
+              fortalecer la seguridad cibernética y progteger los activos de la
+              organización.
+            </p>
+            <div class="row mt-5">
+              <div class="col-md-5 ml-auto">
+                <div class="card card-chart">
+                  <img src="assets/img/c1.png" />
+                </div>
+              </div>
+              <div class="col-md-5 mr-auto">
+                <div class="card card-chart">
+                  <img src="assets/img/c2.png" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5 ml-auto">
+                <div class="card card-chart">
+                  <img src="assets/img/c3.png" />
+                </div>
+              </div>
+              <div class="col-md-5 mr-auto">
+                <div class="card card-chart">
+                  <img src="assets/img/c4.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col-md-12">
+                <p>Elaborado por: {{ analistaNombre }} - {{ analistaEmail }}</p>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label> Recomendaciones </label>
+                  <textarea
+                    class="form-control"
+                    placeholder="Ingrese sus recomendaciones"
+                    rows="4"
+                  ></textarea>
+                  <br /><br />
+                  <button
+                    class="btn btn-fill btn-danger"
+                    type="submit"
+                    (click)="generateReport2()"
+                  >
+                    Generar Informe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          *ngIf="!isLoading && showIframe2"
+          style="
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <iframe
+            style="width: 100%; height: 80vh; border: none"
+            src="assets/img/report.pdf"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-user">
+        <div class="card-body">
+          <p class="card-text"></p>
+          <div class="author">
+            <div class="block block-one"></div>
+            <div class="block block-two"></div>
+            <div class="block block-three"></div>
+            <div class="block block-four"></div>
+            <a href="javascript:void(0)">
+              <img alt="..." class="avatar" src="assets/img/cotedem1.jpeg" />
+
+              <h5 class="title">COTEDEM</h5>
+            </a>
+            <p class="description">
+              Consultores Tecnológicos y Desarrollo Empresarial
+            </p>
+          </div>
+          <div class="card-description">
+            Somos una empresa ecuatoriana que proporciona soluciones
+            tecnológicas integrales. Nuestra pasión es la tecnología y nuestra
+            meta: optimizar la competitividad de las empresas que confían en
+            nosotros. En COTEDEM ofrecemos soluciones IT para el comercio,
+            consultoría y otras áreas afines de negocio. Ponemos a su servicio
+            una metodología sistemática y estandarizada de procesos y
+            tecnologías de última generación.
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="button-container">
+            <button
+              class="btn btn-icon btn-round btn-facebook mr-1"
+              href="javascript:void(0)"
+            >
+              <i class="fab fa-facebook"> </i>
+            </button>
+            <button
+              class="btn btn-icon btn-round btn-twitter mr-1"
+              href="javascript:void(0)"
+            >
+              <i class="fab fa-twitter"> </i>
+            </button>
+            <button
+              class="btn btn-icon btn-round btn-google"
+              href="javascript:void(0)"
+            >
+              <i class="fab fa-google-plus"> </i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="isLoading" class="loading-panel">
+  <div class="loading-content">
+    <img src="assets/img/loading.gif" alt="Loading..." />
+  </div>
+</div>
