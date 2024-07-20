@@ -252,7 +252,7 @@ export class UserComponent implements OnInit {
       type: "line",
       responsive: true,
       data: {
-        labels: ["CVE-2024-3094", "CVE-2024-3400", "CVE-2024-1709", "CVE-2024-0185", "CVE-2024-0100", "CVE-2024-0054"],
+        labels: ["CVE-2024-3094", "CVE-2024-3400", "CVE-2024-1709", "CVE-2024-0185", "CVE-2024-0100", "CVE-2024-TESISS"],
         datasets: [
           {
             label: "Data",
