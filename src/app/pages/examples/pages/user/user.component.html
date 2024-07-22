@@ -59,7 +59,13 @@
               <div class="col-md-4 pr-md-1">
                 <div class="form-group">
                   <label> Cargo </label>
-                  <input class="form-control" type="text" value="" />
+                  <input
+                    class="form-control"
+                    type="text"
+                    value=""
+                    [(ngModel)]="analistaCargo"
+                    name="analistaCargo"
+                  />
                 </div>
               </div>
               <div class="col-md-4 pl-md-1">
@@ -69,61 +75,41 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="row">
-              <div class="col-md-12">
-                <div class="form-group">
-                  <label> Address </label>
-                  <input
-                    class="form-control"
-                    placeholder="Home Address"
-                    type="text"
-                    value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
-                  />
-                </div>
-              </div>
-            </div>
             <div class="row">
               <div class="col-md-4 pr-md-1">
                 <div class="form-group">
-                  <label> City </label>
-                  <input class="form-control" type="text" value="Mike" />
-                </div>
-              </div>
-              <div class="col-md-4 px-md-1">
-                <div class="form-group">
-                  <label> Country </label>
-                  <input class="form-control" type="text" value="Andrew" />
-                </div>
-              </div>
-              <div class="col-md-4 pl-md-1">
-                <div class="form-group">
-                  <label> Postal Code </label>
+                  <label> Número de Vulnerabilidades a generar </label>
                   <input
                     class="form-control"
-                    placeholder="ZIP Code"
                     type="number"
+                    [(ngModel)]="numeroVulnerabilidades"
+                    min="1"
+                    max="10"
+                    step="1"
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 pr-md-1">
+                <div class="form-group">
+                  <label> Número de Amenazas a generar </label>
+                  <input
+                    class="form-control"
+                    type="number"
+                    [(ngModel)]="numeroAmenazas"
+                    min="0"
+                    max="10"
+                    step="1"
                   />
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-8">
-                <div class="form-group">
-                  <label> About Me </label>
-                  <textarea class="form-control" cols="80" rows="4">
-Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.
-</textarea
-                  >
-                </div>
-              </div>
-            </div> -->
           </form>
         </div>
         <div class="card-footer">
           <button
             class="btn btn-fill btn-danger"
             type="submit"
-            (click)="generateReport()"
+            (click)="previsualizarInforme()"
             [disabled]="!analistaNombre || !analistaEmail"
           >
             Previsualizar Informe
@@ -132,64 +118,127 @@ Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.
         <div *ngIf="!isLoading && showIframe">
           <div
             class="card-footer"
-            style="background-color: beige; text-align: center"
+            style="background-color: #e3e3e3; text-align: center; color: black"
           >
             <img src="assets/img/cotedem1.jpeg" width="40%" />
-            <h4 style="color: black">
-              Informe de Inteligencia de Amenazas Cibernéticas
+            <h4 style="color: black; padding-top: 20px">
+              <strong>Informe de Inteligencia de Amenazas Cibernéticas</strong>
             </h4>
             <p style="text-align: justify; color: black">
-              Este informe proporciona una visión detallada de las amenazas
-              cibernéticas detectadas y analizadas entre el 01/01/2024 hasta hoy
-              {{ today | date : "dd-MM-yyyy" }}. Se destacan las amenazas más
-              críticas, los patrones emergentes y las recomendaciones para la
-              mitigación de los riesgos. Este análisis es fundamental para
-              fortalecer la seguridad cibernética y progteger los activos de la
-              organización.
+              <strong>Analista: </strong> {{ analistaNombre }}
             </p>
-            <div class="row mt-5">
-              <div class="col-md-5 ml-auto">
-                <div class="card card-chart">
-                  <img src="assets/img/c1.png" />
+            <p style="text-align: justify; color: black">
+              <strong>Email: </strong> {{ analistaEmail }}
+            </p>
+            <p style="text-align: justify; color: black">
+              Este informe proporciona una visión detallada de las amenazas
+              cibernéticas detectadas y analizadas, de las cuales se destacan
+              las amenazas más críticas, los patrones emergentes y las
+              recomendaciones para la mitigación de los riesgos. Este análisis
+              es fundamental para fortalecer la seguridad cibernética y
+              progteger los activos de la organización.
+            </p>
+
+            <div class="container mt-12">
+              <h4 style="color: black; padding-top: 20px">
+                <strong>Vulnerabilidades mas activas</strong>
+              </h4>
+              <div class="col-md-12">
+                <div class="chart-area">
+                  <canvas #chart1></canvas>
                 </div>
               </div>
-              <div class="col-md-5 mr-auto">
-                <div class="card card-chart">
-                  <img src="assets/img/c2.png" />
-                </div>
+              <div class="col-md-12">
+                <h5 style="padding-top: 10px; color: black">
+                  Informe del analista:
+                </h5>
+                <textarea
+                  class="form-control"
+                  placeholder="Ingrese sus recomendaciones"
+                  style="color: black"
+                  [(ngModel)]="txtRecomendacionesVulnerabilidades"
+                  rows="4"
+                ></textarea>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-5 ml-auto">
-                <div class="card card-chart">
-                  <img src="assets/img/c3.png" />
+
+            <div class="container mt-12">
+              <h4 style="color: black; padding-top: 20px">
+                <strong>Amenazas mas activas</strong>
+              </h4>
+              <div class="col-md-12">
+                <div class="chart-area">
+                  <canvas #chart2></canvas>
                 </div>
               </div>
-              <div class="col-md-5 mr-auto">
-                <div class="card card-chart">
-                  <img src="assets/img/c4.png" />
+              <div class="col-md-12">
+                <h5 style="padding-top: 10px; color: black">
+                  Informe del analista:
+                </h5>
+                <textarea
+                  class="form-control"
+                  placeholder="Ingrese sus recomendaciones"
+                  style="color: black"
+                  [(ngModel)]="txtRecomendacionesAmenazas"
+                  rows="4"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="container mt-12">
+              <h4 style="color: black; padding-top: 20px">
+                <strong>Intrusiones identificadas</strong>
+              </h4>
+              <div class="col-md-12">
+                <div class="chart-area">
+                  <canvas #chart3></canvas>
                 </div>
+              </div>
+              <div class="col-md-12">
+                <h5 style="padding-top: 10px; color: black">
+                  Informe del analista:
+                </h5>
+                <textarea
+                  class="form-control"
+                  placeholder="Ingrese sus recomendaciones"
+                  style="color: black"
+                  [(ngModel)]="txtRecomendacionesIntrusiones"
+                  rows="4"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="container mt-12">
+              <h4 style="color: black; padding-top: 20px">
+                <strong>Ataques recibidos</strong>
+              </h4>
+              <div class="col-md-12">
+                <div class="chart-area">
+                  <canvas #chart4></canvas>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <h5 style="padding-top: 10px; color: black">
+                  Informe del analista:
+                </h5>
+                <textarea
+                  class="form-control"
+                  placeholder="Ingrese sus recomendaciones"
+                  style="color: black"
+                  [(ngModel)]="txtRecomendacionesAtaques"
+                  rows="4"
+                ></textarea>
               </div>
             </div>
           </div>
           <div class="card-footer">
             <div class="row">
               <div class="col-md-12">
-                <p>Elaborado por: {{ analistaNombre }} - {{ analistaEmail }}</p>
-              </div>
-              <div class="col-md-12">
                 <div class="form-group">
-                  <label> Recomendaciones </label>
-                  <textarea
-                    class="form-control"
-                    placeholder="Ingrese sus recomendaciones"
-                    rows="4"
-                  ></textarea>
-                  <br /><br />
                   <button
                     class="btn btn-fill btn-danger"
                     type="submit"
-                    (click)="generateReport2()"
+                    (click)="generarInforme()"
                   >
                     Generar Informe
                   </button>
@@ -197,21 +246,6 @@ Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.
               </div>
             </div>
           </div>
-        </div>
-
-        <div
-          *ngIf="!isLoading && showIframe2"
-          style="
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          "
-        >
-          <iframe
-            style="width: 100%; height: 80vh; border: none"
-            src="assets/img/report.pdf"
-          ></iframe>
         </div>
       </div>
     </div>

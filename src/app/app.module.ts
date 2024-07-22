@@ -16,6 +16,8 @@ import { RtlLayoutComponent } from "./layouts/rtl-layout/rtl-layout.component";
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { AuthService } from './auth.service';
     RouterModule,
     AppRoutingModule,
     ToastrModule.forRoot(),
-    ComponentsModule
+    ComponentsModule,
+    HttpClientModule
   ],
   providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]

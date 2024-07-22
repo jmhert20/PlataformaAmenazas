@@ -1,6 +1,11 @@
 <div class="content">
   <div class="row">
     <div class="col-lg-6 col-sm-6 text-center">
+      <div class="card card-header text-center">
+        <a class="btn btn-fill btn-danger" href="#/pages/user">
+          Generar nuevo reporte
+        </a>
+      </div>
       <div class="card card-tasks text-left">
         <div class="card-header">
           <h6 class="title d-inline">Reportes(5)</h6>
@@ -190,13 +195,6 @@
             </table>
           </div>
         </div>
-      </div>
-
-      <div>
-        <a class="btn btn-fill btn-danger" href="#/pages/user">
-          Generar Reporte
-        </a>
-        <br /><br />
       </div>
 
       <div *ngIf="isLoading" class="loading-panel">

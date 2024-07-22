@@ -1,17 +1,11 @@
-# [Black Dashboard PRO Angular](https://demos.creative-tim.com/black-dashboard-pro-angular/#/dashboard) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-pro-angular%2F%23%2Fadmin%2Fdashboard&text=Black%20Dashboard%20PRO%20Angular%20-%20Premium%20Bootstrap%20Admin%20Template&original_referer=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-pro-angular%2F&via=creativetim&hashtags=angular%2Cbootstrap%2Ccreativetim%2Ccreativetimofficial)
+# [Plataforma de Amenazas](https://demos.creative-tim.com/black-dashboard-pro-angular/#/dashboard) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-pro-angular%2F%23%2Fadmin%2Fdashboard&text=Black%20Dashboard%20PRO%20Angular%20-%20Premium%20Bootstrap%20Admin%20Template&original_referer=https%3A%2F%2Fdemos.creative-tim.com%2Fblack-dashboard-pro-angular%2F&via=creativetim&hashtags=angular%2Cbootstrap%2Ccreativetim%2Ccreativetimofficial)
 
-
-
-![version](https://img.shields.io/badge/version-1.3.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/ct-black-dashboard-pro-angular.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/ct-black-dashboard-pro-angular.svg?maxAge=2592000)]()  [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
+![version](https://img.shields.io/badge/version-1.3.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/ct-black-dashboard-pro-angular.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/ct-black-dashboard-pro-angular.svg?maxAge=2592000)]() [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
 
 ![Product Gif](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/black-dashboard-pro-angular/bdp_angular.gif)
 
-
-Black Dashboard PRO Angular is a beautiful [Bootstrap 4](http://getbootstrap.com/) and [Angular](https://angular.io/).Admin Dashboard with a huge number of components built to fit together and look amazing. If you are looking for a tool to manage and visualize data about your business, this dashboard is the thing for you. It combines colors that are easy on the eye, spacious cards, beautiful typography, and graphics.
+Plataforma de amenazas is a beautiful [Bootstrap 4](http://getbootstrap.com/) and [Angular](https://angular.io/).Admin Dashboard with a huge number of components built to fit together and look amazing. If you are looking for a tool to manage and visualize data about your business, this dashboard is the thing for you. It combines colors that are easy on the eye, spacious cards, beautiful typography, and graphics.
 Black Dashboard PRO Angular comes packed with all plugins that you might need inside a project and documentation on how to get started. It is light and easy to use, and also very powerful.
-
-Black Dashboard PRO Angular features over 160 individual components, giving you the freedom of choosing and combining. This means that there are thousands of possible combinations. All components can take variations in color, that you can easily modify using SASS files. You will save a lot of time going from prototyping to full-functional code because all elements are implemented.
-We thought about everything, so this dashboard comes with 2 versions, Dark Mode and Light Mode.
 
 We are very excited to share this dashboard with you and we look forward to hearing your feedback!
 
@@ -19,37 +13,33 @@ We are very excited to share this dashboard with you and we look forward to hear
 
 ## Table of Contents
 
-* [Versions](#versions)
-* [Demo](#demo)
-* [Quick Start](#quick-start)
-* [Documentation](#documentation)
-* [File Structure](#file-structure)
-* [Browser Support](#browser-support)
-* [Resources](#resources)
-* [Reporting Issues](#reporting-issues)
-* [Technical Support or Questions](#technical-support-or-questions)
-* [Licensing](#licensing)
-* [Useful Links](#useful-links)
-
+- [Versions](#versions)
+- [Demo](#demo)
+- [Quick Start](#quick-start)
+- [Documentation](#documentation)
+- [File Structure](#file-structure)
+- [Browser Support](#browser-support)
+- [Resources](#resources)
+- [Reporting Issues](#reporting-issues)
+- [Technical Support or Questions](#technical-support-or-questions)
+- [Licensing](#licensing)
+- [Useful Links](#useful-links)
 
 ## Versions
 
 [<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://themes.getbootstrap.com/product/black-dashboard-pro-premium-bootstrap-4-admin/)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard-pro-angular?ref=bdpa-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/black-dashboard-pro-angular?ref=bdpa-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-black-dashboard-pro?ref=bdpa-readme)
 
-
-
-| HTML | React | Vue | Angular |
-| --- | --- | --- | --- |
+| HTML                                                                                                                                                                                                   | React                                                                                                                                                                                     | Vue                                                                                                                                                                                     | Angular                                                                                                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Black Dashboard PRO HTML](https://themes.getbootstrap.com/wp-content/uploads/2018/08/bb_bdp_thumbnail.jpg)](https://themes.getbootstrap.com/product/black-dashboard-pro-premium-bootstrap-4-admin/) | [![Black Dashboard PRO React](https://s3.amazonaws.com/creativetim_bucket/products/138/original/opt_bdp_thumbnail.jpg)](https://www.creative-tim.com/product/black-dashboard-pro-angular) | [![Vue Black Dashboard PRO](https://s3.amazonaws.com/creativetim_bucket/products/135/original/opt_bdp_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-black-dashboard-pro) | [![Black Dashboard PRO Angular](https://s3.amazonaws.com/creativetim_bucket/products/256/original/opt_bdp_angular_thumbnail.jpg)](https://www.creative-tim.com/product/black-dashboard-pro-angular) |
 
 ## Demo
 
-| Dashboard | User Profile | Tables | Maps | Notification |
-| --- | --- | --- | --- | --- |
-| [![Start page](./github-assets/dashboard-page.png)](https://demos.creative-tim.com/black-dashboard-pro-angular/#/dashboard) | [![User profile page](./github-assets/user-page.png)](https://demos.creative-tim.com/black-dashboard-pro-angular/#/pages/profile) | [![Tables page ](./github-assets/table-page.png)](https://demos.creative-tim.com/black-dashboard-pro-angular/#/tables/extended) | [![Maps Page](./github-assets/map-page.png)](https://demos.creative-tim.com/black-dashboard-pro-angular/#/maps/full-screen) | [![Notification page](./github-assets/notifications-page.png)](https://demos.creative-tim.com/black-dashboard-pro-angular/#/components/notifications)
+| Dashboard                                                                                                                   | User Profile                                                                                                                      | Tables                                                                                                                          | Maps                                                                                                                        | Notification                                                                                                                                          |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Start page](./github-assets/dashboard-page.png)](https://demos.creative-tim.com/black-dashboard-pro-angular/#/dashboard) | [![User profile page](./github-assets/user-page.png)](https://demos.creative-tim.com/black-dashboard-pro-angular/#/pages/profile) | [![Tables page ](./github-assets/table-page.png)](https://demos.creative-tim.com/black-dashboard-pro-angular/#/tables/extended) | [![Maps Page](./github-assets/map-page.png)](https://demos.creative-tim.com/black-dashboard-pro-angular/#/maps/full-screen) | [![Notification page](./github-assets/notifications-page.png)](https://demos.creative-tim.com/black-dashboard-pro-angular/#/components/notifications) |
 
 [View More](https://demos.creative-tim.com/black-dashboard-pro-angular/#/dashboard).
-
 
 ## Quick start
 
@@ -57,10 +47,9 @@ Quick start options:
 
 - [Buy from Creative Tim](https://www.creative-tim.com/product/black-dashboard-pro-angular).
 
-
 ## Documentation
-The documentation for the Black Dashboard PRO Angular is hosted at our [website](https://demos.creative-tim.com/black-dashboard-pro-angular/#/documentation/overview).
 
+The documentation for the Black Dashboard PRO Angular is hosted at our [website](https://demos.creative-tim.com/black-dashboard-pro-angular/#/documentation/overview).
 
 ## File Structure
 
@@ -303,8 +292,8 @@ At present, we officially aim to support the last two versions of the following 
 
 <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 
-
 ## Resources
+
 - Demo: https://demos.creative-tim.com/black-dashboard-pro-angular/#/dashboard
 - Download Page: https://www.creative-tim.com/product/black-dashboard-pro-angular
 - Documentation: https://demos.creative-tim.com/black-dashboard-pro-angular/#/documentation/overview
@@ -313,6 +302,7 @@ At present, we officially aim to support the last two versions of the following 
 - Issues: [Github Issues Page](https://github.com/creativetimofficial/ct-black-dashboard-pro-angular/issues)
 
 ## Reporting Issues
+
 We use GitHub Issues as the official bug tracker for the Black Dashboard PRO Angular. Here are some advices for our users that want to report an issue:
 
 1. Make sure that you are using the latest version of the Black Dashboard PRO Angular. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/).

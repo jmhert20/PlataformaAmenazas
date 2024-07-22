@@ -43,6 +43,7 @@
     "ngx-chips": "2.2.2",
     "ngx-toastr": "14.2.3",
     "nouislider": "14.6.3",
+    "pdfmake": "^0.2.10",
     "perfect-scrollbar": "1.5.5",
     "rxjs": "^6.5.4",
     "stream": "0.0.2",

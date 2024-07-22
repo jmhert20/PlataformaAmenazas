@@ -10,13 +10,13 @@
         <div class="card-header">
           <h5 class="card-category">Vulnerabilidades mas activas</h5>
           <h3 class="card-title">
-            <i class="tim-icons icon-chart-bar-32 text-primary"> </i> 55
-            promedio
+            <i class="tim-icons icon-send text-info"> </i>
+            {{ totalVulnerabilidades }}
           </h3>
         </div>
         <div class="card-body">
           <div class="chart-area">
-            <canvas id="chartSimpleWithGradient"> </canvas>
+            <canvas id="chartWithNumbersAndGrid"> </canvas>
           </div>
         </div>
       </div>
@@ -26,12 +26,13 @@
         <div class="card-header">
           <h5 class="card-category">Amenazas más activas (3 últimos meses)</h5>
           <h3 class="card-title">
-            <i class="tim-icons icon-send text-info"> </i> 430 promedio
+            <i class="tim-icons icon-chart-bar-32 text-primary"> </i>
+            {{ totalAmenazas }}
           </h3>
         </div>
         <div class="card-body">
           <div class="chart-area">
-            <canvas id="chartWithNumbersAndGrid"> </canvas>
+            <canvas id="chartSimpleWithGradient"> </canvas>
           </div>
         </div>
       </div>
@@ -43,7 +44,8 @@
         <div class="card-header">
           <h5 class="card-category">Intrusiones identificadas</h5>
           <h3 class="card-title">
-            <i class="tim-icons icon-shape-star text-danger"> </i> 753
+            <i class="tim-icons icon-shape-star text-danger"> </i>
+            {{ totalIntrusiones }}
           </h3>
         </div>
         <div class="card-body">
@@ -54,9 +56,10 @@
     <div class="col-md-5 mr-auto">
       <div class="card card-chart">
         <div class="card-header">
-          <h5 class="card-category">Ataques recibidos vs solventados</h5>
+          <h5 class="card-category">Ataques recibidos</h5>
           <h3 class="card-title">
-            <i class="tim-icons icon-warning text-warning"> </i> 120
+            <i class="tim-icons icon-warning text-warning"> </i>
+            {{ totalAtaques }}
           </h3>
         </div>
         <div class="card-body">
@@ -67,5 +70,9 @@
       </div>
     </div>
   </div>
-   
+</div>
+<div *ngIf="isLoading" class="loading-panel">
+  <div class="loading-content">
+    <img src="assets/img/loading.gif" alt="Loading..." />
+  </div>
 </div>
